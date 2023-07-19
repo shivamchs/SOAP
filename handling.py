@@ -68,7 +68,7 @@ async def call(key):
 while(True):
     for key in data:
             lst=getvalue(key)
-            if lst.get("status")=="pending":
+            if lst.get("status")=="pending" and lst.get("is_compensation")==False:
                 lst2=lst.get("parent")
                 if(lst2):
                     for l in lst2:
